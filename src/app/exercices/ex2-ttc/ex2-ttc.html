@@ -1,0 +1,14 @@
+<h2>Ex 2 · Calculateur TTC</h2>
+
+<div class="form">
+  <label>Prix unitaire HT <input type="number" min="0" [(ngModel)]="prix" /></label>
+  <label>Quantité <input type="number" min="1" [(ngModel)]="quantite" /></label>
+  <label>TVA (%) <input type="number" min="0" [(ngModel)]="tva" /></label>
+</div>
+
+<div class="result">
+  <p>Total HT : {{ totalHT | number: '1.2-2' }}</p>
+  <p>Remise : {{ remise * 100 }} %</p>
+  <p>Après remise : {{ totalApresRemise | number: '1.2-2' }}</p>
+  <p><strong>Total TTC : {{ totalTTC | number: '1.2-2' }}</strong></p>
+</div>

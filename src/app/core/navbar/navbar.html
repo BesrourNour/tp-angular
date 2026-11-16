@@ -1,0 +1,6 @@
+<nav class="navbar">
+  <span class="brand">TP1 Angular · RT4</span>
+  @for (l of links; track l.path) {
+    <a [routerLink]="l.path" routerLinkActive="active">{{ l.label }}</a>
+  }
+</nav>
