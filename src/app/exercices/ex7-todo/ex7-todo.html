@@ -1,0 +1,28 @@
+@if (title()) {
+  <h2>{{ title() }}</h2>
+}
+
+<div class="form">
+  <label>
+    Name :
+    <input type="text" name="name" [(ngModel)]="name" />
+  </label>
+  <label>
+    Content :
+    <input type="text" name="content" [(ngModel)]="content" />
+  </label>
+  <button type="button" (click)="addTodo()">Add Todo</button>
+</div>
+
+<p class="count">Total : {{ count() }} todo(s)</p>
+
+<ul class="list">
+  @for (todo of todos(); track todo) {
+    <li>
+      <span><strong>{{ todo.name }}</strong> : {{ todo.content }}</span>
+      <button type="button" class="delete" (click)="deleteTodo(todo)">Supprimer</button>
+    </li>
+  } @empty {
+    <li class="empty">Aucun todo</li>
+  }
+</ul>
