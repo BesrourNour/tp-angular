@@ -1,0 +1,2 @@
+.week { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.week > app-ex7-todo { flex: 1 1 10rem; min-width: 10rem; }
