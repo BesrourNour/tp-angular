@@ -13,7 +13,7 @@ import { TodoService } from '../../services/todo.service';
 })
 export class Ex7Todo {
   // Titre affiché au-dessus du formulaire (l'Ex 8 y met le jour de la semaine).
-  title = input('Ex 7 · Todo');
+  title = input('Todo');
 
   private readonly todoService = inject(TodoService);
 

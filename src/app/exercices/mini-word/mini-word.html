@@ -1,0 +1,24 @@
+<!-- mini-word.html -->
+ <h2>Mini Word</h2>
+
+<label>Couleur :
+  <input type="color" [(ngModel)]="color">
+</label>
+<label>Taille :
+  <input type="number" [(ngModel)]="size" min="8" max="72">
+  
+</label> 
+<label>Police :
+  <select [(ngModel)]="font">
+    @for (f of fonts; track f) {
+      <option [value]="f">{{ f }}</option>
+    }
+  </select>
+</label>
+<p [ngStyle]="{
+     color: color,
+     fontSize: size + 'px',
+     fontFamily: font
+   }">
+  Ceci est mon paragraphe Mini Word. Modifiez la couleur, la taille et la police !
+</p>

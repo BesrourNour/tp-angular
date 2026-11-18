@@ -1,0 +1,28 @@
+@if (hiredCount() > 0) {
+  <section class="hired-container">
+    <h2>Liste des personnes embauchées</h2>
+    <p class="hired-count">Nombre de personnes embauchées : {{ hiredCount() }}</p>
+
+    <div class="hired-list">
+      @for (cv of hiredCvs(); track cv.id) {
+        <article class="hired-card">
+          <img [src]="cv.path" [alt]="cv.firstname + ' ' + cv.name">
+          <div class="hired-info">
+            <h3>{{ cv.firstname }} {{ cv.name }}</h3>
+            <p>{{ cv.job }}</p>
+            <p>Âge : {{ cv.age }} ans</p>
+            <p>CIN : {{ cv.cin }}</p>
+            <button type="button" class="btn-delete" (click)="supprimer(cv)">Supprimer</button>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+}
+
+@if (toastMessage(); as message) {
+  <div class="toast-budget" role="alert" aria-live="assertive">
+    <span>⚠️</span>
+    {{ message }}
+  </div>
+}

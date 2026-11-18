@@ -10,13 +10,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class Navbar {
   // Ajouter une entrée ici = ajouter un lien dans la navbar
   links = [
-    { path: '/ex1', label: 'Ex 1 · Div coloré' },
-    { path: '/ex2', label: 'Ex 2 · TTC' },
-    // { path: '/cv', label: 'Ex 3/5 · CvTech' },
-    // { path: '/mini-word', label: 'Ex 4 · Mini Word' },
-    // { path: '/rainbow', label: 'Ex 6 · Arc-en-ciel' },
-    // { path: '/todo', label: 'Ex 7 · Todo' },
-    // { path: '/week-todo', label: 'Ex 8 · WeekTodo' },
-    // { path: '/embauche', label: 'Ex 9 · Embauche' },
+    { path: '/ex1', label: 'Div coloré' },
+    { path: '/ex2', label: 'TTC' },
+    { path: '/cv', label: 'CvTech' },
+    { path: '/mini-word', label: 'Mini Word' },
+   { path: '/rainbow', label: 'Arc-en-ciel' },
+     { path: '/todo', label: 'Todo' },
+    { path: '/week-todo', label: 'WeekTodo' },
   ];
 }

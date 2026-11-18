@@ -1,0 +1,159 @@
+
+.hired-container {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  color: #263238;
+  margin-bottom: 15px;
+}
+
+.hired-count {
+  font-weight: 600;
+  color: #198754;
+  margin-bottom: 20px;
+}
+
+.hired-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hired-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  width: 280px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.hired-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hired-info h3 {
+  margin: 0 0 8px;
+  color: #263238;
+}
+
+.hired-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.empty-message {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  background: white;
+  border-radius: 8px;
+}
+
+
+.budget-alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffecb5;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.hired-container {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+.hired-container h2 {
+  color: #263238;
+  margin-bottom: 15px;
+}
+
+.hired-count {
+  font-weight: 600;
+  color: #198754;
+  margin-bottom: 20px;
+}
+
+.hired-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hired-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  width: 280px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.hired-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hired-info h3 {
+  margin: 0 0 8px;
+  color: #263238;
+}
+
+.hired-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.empty-message {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  background: white;
+  border-radius: 8px;
+}
+
+/* Toast de dépassement du budget */
+.toast-budget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  background-color: #dc3545;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  animation: toast-in 0.3s ease;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn-delete { margin-top: 8px; background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
