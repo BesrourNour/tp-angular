@@ -18,6 +18,6 @@ export class CvComponent {
   readonly selectedCv = signal<Cv | null>(null); 
 
   onSelectCv(cv: Cv): void {
-    this.selectedCv.set(cv); // 
+    this.selectedCv.set(cv); //
   }
 }

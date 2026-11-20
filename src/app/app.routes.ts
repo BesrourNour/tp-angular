@@ -8,7 +8,7 @@ import { CvTech } from './exercices/cvtech/cvtech';
 import { Ex8WeekTodo } from './exercices/ex8-week-todo/ex8-week-todo';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'ex1', pathMatch: 'full' },
+  { path: '', redirectTo: 'ex1', pathMatch: 'full' }, // redirige vers ex1 automatiquement
   { path: 'ex1', component: Ex1ColorDiv },
   { path: 'ex2', component: Ex2Ttc },
   { path: 'cv', component: CvTech },
