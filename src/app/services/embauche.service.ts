@@ -1,11 +1,13 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { computed, signal,Service } from '@angular/core';
 import { Cv } from '../models/cv';
 
-@Injectable({
-  providedIn: 'root'
-})
+
+
+@Service()
 export class EmbaucheService {
 
+  // NOUVEAU : signal pour stocker les CV embauchés 
+  // readonly pour ne pas permettre la modification directe depuis l'extérieur du service
   private readonly _hiredCvs = signal<Cv[]>([]);
 
   readonly hiredCvs = this._hiredCvs.asReadonly();
@@ -40,9 +42,7 @@ export class EmbaucheService {
   }
 
   private showBudgetToast(): void {
-    this.toastMessage.set(
-      `Budget dépassé ! ${this.hiredCount()} CV ont été embauchés.`
-    );
+    this.toastMessage.set(`Budget dépassé ! ${this.hiredCount()} CV ont été embauchés.`);
 
     if (this.toastTimer) {
       clearTimeout(this.toastTimer);

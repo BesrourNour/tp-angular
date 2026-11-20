@@ -10,9 +10,8 @@ import { CvItemComponent } from '../cv-item/cv-item.component';
 })
 
 export class CvListComponent {
-  cvs = input<Cv[]>([]);
+  cvs = input<readonly Cv[]>([]);   
   selectCv = output<Cv>();
-
   selectedCv = input<Cv | null>(null);
 
   onSelect(cv: Cv): void {

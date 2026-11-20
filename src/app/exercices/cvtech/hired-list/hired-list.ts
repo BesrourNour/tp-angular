@@ -8,6 +8,7 @@ import { EmbaucheService } from '../../../services/embauche.service';
   templateUrl: './hired-list.html',
   styleUrl: './hired-list.css'
 })
+
 export class HiredListComponent {
   private readonly embaucheService = inject(EmbaucheService);
 
