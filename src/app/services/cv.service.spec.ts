@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { Cv } from './cv';
+import { CvService } from './cv.service';
 
-describe('Cv', () => {
-  let service: Cv;
+describe('CvService', () => {
+  let service: CvService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Cv);
+    service = TestBed.inject(CvService);
   });
 
   it('should be created', () => {

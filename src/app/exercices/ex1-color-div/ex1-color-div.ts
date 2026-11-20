@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-ex1-color-div',
@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './ex1-color-div.css',
 })
 export class Ex1ColorDiv {
-  color = ''; // vide = couleur par défaut du CSS
+  // Angular 22 : OnPush par défaut -> l'état de la vue vit dans des signals.
+  color = signal(''); // vide = couleur par défaut du CSS
 
   reset(input: HTMLInputElement) {
     input.value = '';
-    this.color = '';
+    this.color.set('');
   }
 }

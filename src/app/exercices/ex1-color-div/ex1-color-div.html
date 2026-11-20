@@ -2,8 +2,8 @@
 
 <!-- #couleur = référence template vers l'input -->
 <input #couleur type="text" placeholder="red, #00ff00, rgb(0,0,255)..."
-       (input)="color = couleur.value" />
+       (input)="color.set(couleur.value)" />
 <button (click)="reset(couleur)">Réinitialiser</button>
 
 <!-- [style.backgroundColor] : si color est vide, le CSS par défaut s'applique -->
-<div class="box" [style.backgroundColor]="color">Ma couleur change ici</div>
+<div class="box" [style.backgroundColor]="color()">Ma couleur change ici</div>
