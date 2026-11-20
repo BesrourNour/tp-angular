@@ -6,7 +6,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './ex1-color-div.css',
 })
 export class Ex1ColorDiv {
-  // Angular 22 : OnPush par défaut -> l'état de la vue vit dans des signals.
   color = signal(''); // vide = couleur par défaut du CSS
 
   reset(input: HTMLInputElement) {
