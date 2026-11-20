@@ -1,3 +1,4 @@
+import { TestBed } from '@angular/core/testing';
 import { TodoService } from './todo.service';
 import { Todo } from '../models/todo';
 
@@ -5,8 +6,9 @@ describe('TodoService', () => {
   let service: TodoService;
 
   beforeEach(() => {
-    service = new TodoService();
     vi.spyOn(console, 'log').mockImplementation(() => {});
+    TestBed.configureTestingModule({ providers: [TodoService] });
+    service = TestBed.inject(TodoService);
   });
 
   it('starts with an empty list', () => {
@@ -28,8 +30,17 @@ describe('TodoService', () => {
     expect(service.getTodos()()).toEqual([t2]);
   });
 
-  it('logs the todos', () => {
+  it('logs the todos automatically (effect) when the list changes', () => {
+    TestBed.tick();
+    vi.mocked(console.log).mockClear();
+
     service.addTodo(new Todo('a', 'b'));
+    TestBed.tick();
+
+    expect(console.log).toHaveBeenCalledTimes(1);
+  });
+
+  it('logTodos logs on demand', () => {
     service.logTodos();
     expect(console.log).toHaveBeenCalled();
   });
